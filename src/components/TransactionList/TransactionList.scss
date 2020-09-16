@@ -1,0 +1,52 @@
+#transaction-list {
+  background-color: #444;
+  border-radius: 3px;
+  box-shadow: 0 5px 10px #222;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    background-color: #fff;
+    box-shadow: 0 5px 10px #222;
+    border-radius: 3px;
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+    line-height: 1.5rem;
+
+    &.income {
+      border-left: 5px solid #2ecc71;
+    }
+    &.expense {
+      border-left: 5px solid #f0513f;
+    }
+
+    .btn-delete {
+      cursor: pointer;
+      background-color: #e74c3c;
+      border-radius: 0.75rem;
+      border: 0;
+      color: #fff;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-left: 0.5rem;
+      padding: 0 0.25rem;
+      transition: opacity 0.5s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
