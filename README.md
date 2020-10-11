@@ -1,6 +1,6 @@
 # React Expenses v1.0
 
-Small React app to track expenses
+Small expenses tracking app made with React (React Hooks + Typescript)
 
 ### Prerequisites
 

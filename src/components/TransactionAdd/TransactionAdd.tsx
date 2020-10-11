@@ -2,20 +2,28 @@ import React, { useState } from "react";
 import "./TransactionAdd.scss";
 
 export const TransactionAdd = () => {
+  const [category, setCategory] = useState('')
   return (
     <div id="transaction-add">
       <h3>Add transaction</h3>
 
       <form>
         <div className="form-control">
-          <select name="category" defaultValue="" required>
+          <select name="category" defaultValue="" value={category} onChange={(e) => setCategory(e.target.value)} required>
             <option value="" disabled>
               Category
             </option>
-            <option value="income">Income</option>
-            <option value="income">Groceries</option>
-            <option value="income">Services</option>
-            <option value="income">Online shopping</option>
+            <optgroup label="Incomes">
+              <option value="salary">Salary</option>
+              <option value="freelance">Freelance</option>
+              <option value="other">Other</option>
+            </optgroup>
+            <optgroup label="Expenses">
+              <option value="housing">Housing</option>
+              <option value="groceries">Groceries</option>
+              <option value="services">Services</option>
+              <option value="shopping">Online shopping</option>
+            </optgroup>
           </select>
         </div>
 
